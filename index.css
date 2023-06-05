@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;700;900&display=swap");
+
+html {
+  height: 100%;
+}
+
+*::-webkit-scrollbar {
+  width: 4px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #fff1e3;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #95c2ea;
+  border-radius: 10px;
+  border: 3px none #ffffff;
+}
+:root{
+  --CARD-SIZE: 3;
+}
+body {
+  width: 100svw;
+  min-width: fit-content;
+  height: 100svh;
+  margin: 0;
+  padding: 0;
+  background-color: #fff1e3;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+#wrapper {
+  overflow-anchor: none;
+  height: 100%;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  scroll-snap-type: y mandatory;
+}
+.Myfont{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 1em;
+line-height: 19px;
+}
+.EachPage {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+}
+
+#MainNav {
+  position: sticky;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  min-height: 15svh;
+  align-items: center;
+  top: 0;
+  z-index: 9;
+  font-size: 1em;
+  padding-left: 12.8vw;
+  padding-right: 12.8vw;
+  /* This make cat behind nav */
+  /* 1232 length on figma */
+}
+
+#NavLeft {
+  flex: 160;
+}
+
+#NavMid {
+  flex: 691;
+}
+
+#NavRight {
+  flex: 380;
+  display: flex;
+  flex-direction: row;
+}
+
+#NavRight>div {
+  padding-right: 2em;
+  flex-grow: 1;
+  overflow: hidden;
+  min-width: 64px;
+}
+
+#Main_Sec1 {
+  /* flex: 399; */
+  height: 60%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+#Main_Sec1>img {
+  transform: translateY(25%);
+}
+
+#Main_Sec2 {
+  flex: 300;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ffcd93;
+}
+
+#Main_Sec2>h1 {
+  font-size: 3em;
+}
+
+#Main_Sec2>p {
+  font-size: 1em;
+}
+
+/* PAGE 2 CSS  */
+#page2 {
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#cardWrapp {
+  flex: 2;
+  font-size: 2em;
+  gap: 7vw;
+  display: grid;
+  grid-template-columns: repeat(var(--CARD-SIZE), minmax(20vw, 1fr));
+  grid-template-rows: minmax(20vw, 1fr) 3em;
+}
+
+#P2Sec1 {
+  width: 100%;
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Card {
+  border-radius: 45px;
+  background-color: #b8b7b7;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.hidecard {
+  display: none;
+}
+
+.Card:hover {
+  background-color: #4a4a4a;
+}
+
+.Card:hover>p {
+  align-self: center;
+}
+
+#P2Card1:hover~#CardHide1 {
+  display: block;
+  color: red;
+}
+
+/* #P2Card1:hover + #CardHide1{
+   
+} */
+/* PAGE 2 END PAGE 3 START */
+
+#Main_Sec1>svg {
+  z-index: -5;
+  float: right;
+  transform: scale(1);
+  transform: translateY(10.6vh);
+  filter: invert(83%) sepia(24%) saturate(787%) hue-rotate(331deg) brightness(102%) contrast(101%);
+}
+
+#IMG2 {
+  height: 45svh;
+  transform: translateY(10px);
+  clip-path: polygon(40% 0, 85% 0, 85% 100%, 40% 100%);
+}
+
+#page4 {
+  justify-content: center;
+  align-items: center;
+}
+
+.slider {
+  width: 100vw;
+  text-align: center;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-color: rgba(255, 255, 255);
+
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.slides::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.slides::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+}
+
+.slides::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.slides>div {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(0.5rem + 1vw);
+}
+
+.slider>a {
+  display: inline-flex;
+  width: 2rem;
+  height: 0.5rem;
+  background: black;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.slider>a:active {
+  top: 1px;
+  color: #1c87c9;
+}
+
+.slider>a:focus {
+  background: #eee;
+}
+
+.Eachslide>p {
+  min-width: 40em;
+  max-width: 45em;
+}

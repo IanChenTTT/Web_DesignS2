@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;700;900&display=swap");
+
+html {
+  height: 100%;
+}
+
+*::-webkit-scrollbar {
+  width: 4px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #fff1e3;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #95c2ea;
+  border-radius: 10px;
+  border: 3px none #ffffff;
+}
+:root{
+  --CARD-SIZE: 3;
+}
+body {
+  width: 100svw;
+  min-width: fit-content;
+  height: 100svh;
+  margin: 0;
+  padding: 0;
+  background-color: #fff1e3;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+#wrapper {
+  overflow-anchor: none;
+  height: 100%;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  scroll-snap-type: y mandatory;
+}
+
+.EachPage {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+}
+
+#MainNav {
+  position: sticky;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  min-height: 15svh;
+  align-items: center;
+  top: 0;
+  z-index: 9;
+  font-size: 1em;
+  padding-left: 12.8vw;
+  padding-right: 12.8vw;
+  /* This make cat behind nav */
+  /* 1232 length on figma */
+}
+
+#NavLeft {
+  flex: 160;
+}
+
+#NavMid {
+  flex: 691;
+}
+
+#NavRight {
+  flex: 380;
+  display: flex;
+  flex-direction: row;
+}
+
+#NavRight>div {
+  padding-right: 2em;
+  flex-grow: 1;
+  overflow: hidden;
+  min-width: 64px;
+}
+#Page1{
+  flex-direction: row;
+  gap: 5vw;
+}
+#Main_Sec1 {
+  flex: 51;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+#Main_Sec1>img {
+height: 100%;
+width: 100%;
+}
+
+#Main_Sec2 {
+  flex: 48;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#Main_Sec2>h1 {
+
+  font-size: clamp(2.2rem, -0.0922rem + 2.5vw, 4.75rem);
+  line-height: 2.9em;
+  font-weight: 500;
+}
+#Main_Sec2 h1 span{
+  font-size: clamp(1.4rem, -0.0922rem + 1.75vw, 3.75rem);
+  font-weight: 600;
+  letter-spacing: 0.065em;
+  color: #CE9255;
+
+}
+
+#Main_Sec2>p {
+  width: 85%;
+  /* font-size: clamp(1rem,calc(0.3497rem + 4.1618vw), 5.5rem); */
+  font-size: clamp(1rem, -0.0922rem + 1.75vw, 3.5rem);
+  /* font-size: clamp(1rem, -0.0922rem + 6.9903vw, 5.5rem); */
+}
+
+/* PAGE 2 CSS  */
+#page2 {
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#cardWrapp {
+  flex: 2;
+  font-size: 2em;
+  gap: 7vw;
+  display: grid;
+  /* grid-template-columns: repeat(3, minmax(15vw, 1fr));
+  grid-template-rows: minmax(15vw, 1fr) 3em; */
+
+  grid-template-columns: repeat(var(--CARD-SIZE),15vw);
+  grid-template-rows: 15vw 3em;
+}
+
+#P2Sec1 {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Card {
+  border-radius: 45px;
+  background-color: #b8b7b7;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  font-size: clamp(1rem, -0.0922rem + 1.75vw, 3.5rem);
+}
+
+.hidecard {
+  display: none;
+  width: 15vw;
+  font-size: clamp(0.8rem, -0.0922rem + 1.15vw, 3.1rem);
+}
+
+.Card:hover {
+  background-color: #4a4a4a;
+  background-color: gray;
+}
+
+.Card:hover>p {
+  align-self: center;
+}
+
+#P2Card1:hover~#CardHide1 {
+  display: block;
+  color:#636363;
+}
+#P2Card2:hover~#CardHide2{
+  display: block;
+  color: #636363;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  
+}
+
+#P2Card3:hover~#CardHide3{
+  display: block;
+  color: #636363;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  
+}
+#P2Card4:hover~#CardHide4{
+  display: block;
+  color: #636363;
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  
+}
+
+/* #P2Card1:hover + #CardHide1{
+   
+} */
+/* PAGE 2 END PAGE 3 START */
+
+#Main_Sec1>svg {
+  z-index: -5;
+  float: right;
+  transform: scale(1);
+  transform: translateY(10.6vh);
+  filter: invert(83%) sepia(24%) saturate(787%) hue-rotate(331deg) brightness(102%) contrast(101%);
+}
+
+#IMG2 {
+  height: 45svh;
+  transform: translateY(10px);
+  clip-path: polygon(40% 0, 85% 0, 85% 100%, 40% 100%);
+}
+/*  page5 start*/
+#page5 {
+  align-items: center;
+  justify-content: flex-end;
+  --CARD-SIZE:4;
+}
+/* page5 end */
+/* page6 start */
+#page6{
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+#page6 h2{
+   font-size: clamp(2.2rem, -0.0922rem + 2.5vw, 4.75rem);
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+#page6 .content h3{
+  font-size: clamp(1.2rem, -0.0922rem + 1.25vw, 3.75rem);
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  background-color:  #FFE1C2;
+  height: inherit;
+  margin:0;
+  border-radius: 10px;
+}
+#page6 .content p {
+  visibility: hidden;
+}
+#page6 .content:hover p {
+  visibility: visible;
+  font-size: clamp(1.4rem, -0.0922rem + 1.75vw, 3.75rem);
+}
+#gallery{
+  width: 90%;
+  height: 55vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content{
+  position: relative;
+  width: 15%;
+  height: inherit;
+  border-radius: 20px;
+  opacity: 0.75;
+  transition: width 1s, opacity 2s, bottom 2s;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+}
+.content:hover{
+  cursor: pointer;
+  opacity: 1;
+  width: 30%;
+  bottom: 5%;
+}

@@ -1,0 +1,73 @@
+body {
+    width: 100svw;
+    min-width: fit-content;
+    height: 250svh;
+    margin: 0;
+    padding: 0;
+    background-color: #fff1e3;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Noto Sans TC", sans-serif;
+  }
+  #MainNav {
+    position: sticky;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    min-height: 15svh;
+    align-items: center;
+    top: 0;
+    z-index: 9;
+    font-size: 1em;
+    /* This make cat behind nav */
+    /* 1232 length on figma */
+  }
+  #NavLeft {
+    flex: 160;
+  }
+
+  #NavMid {
+    flex: 691;
+  }
+
+  #NavRight {
+    flex: 380;
+    display: flex;
+    flex-direction: row;
+  }
+
+  #NavRight>div {
+    padding-right: 2em;
+    flex-grow: 1;
+    overflow: hidden;
+    min-width: 64px;
+  }
+  .container{
+    width: 100%;
+    height: 250svh;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .item{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-gap:20px;
+  }
+  h1{
+    margin: 0 auto;
+  }
+  p{
+    font-size: 30px;
+  }
+  img{
+    width: 90%;
+  }     
+  .item_img{
+    text-align: center;
+    height: 60%;     
+  }
+  .item_text{
+    padding-right: 5%;
+    height: 60%; 
+  }

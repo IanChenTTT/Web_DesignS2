@@ -80,12 +80,28 @@ body {
     letter-spacing: 0.29em;
 }
 
-.wrongway_whole1 h2 {
+ .wrongway_whole1 h2 {
     font-size: 32px;
     color: rgb(255, 140, 0);
     margin: 20px;
-    padding-top: 40px;
+    padding-top: 90px;
     padding-right: 450px;
+}
+
+.wrongway_whole2 h2 {
+    font-size: 32px;
+    color: rgb(255, 140, 0);
+    margin: 20px;
+    padding-top: 90px;
+    padding-right: 420px;
+}
+
+.rightway_whole1 h2 {
+    font-size: 32px;
+    color: rgb(255, 140, 0);
+    margin: 20px;
+    padding-top: 90px;
+    padding-right: 570px;
 }
 
 .wrongway_whole1 {
@@ -123,9 +139,19 @@ body {
     margin: 0 85px 0 85px;
     font-size: 1.5vw;
     text-align: justify;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
-.rightway_whole1 h2 {
+.wrongway_whole2 p {
+    margin: 0 85px 0 85px;
+    font-size: 1.5vw;
+    text-align: justify;
+    margin-top: 50px;
+}
 
+.rightway_whole1 p {
+    margin: 0 85px 0 85px;
+    font-size: 1.5vw;
+    text-align: justify;
+    margin-top: 50px;
 }

@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;700;900&display=swap");
 
 html {
-  height: 100%;
+  margin: 0;
+  padding: 0;
+  --bar-height: 15vh;
+  --extra-space: 30px;
 }
 
 *::-webkit-scrollbar {
@@ -17,50 +20,62 @@ html {
   border-radius: 10px;
   border: 3px none #ffffff;
 }
-:root{
+
+:root {
   --CARD-SIZE: 3;
 }
+
 body {
-  width: 100svw;
-  min-width: fit-content;
-  height: 100svh;
-  margin: 0;
-  padding: 0;
   background-color: #fff1e3;
   font-size: 16px;
   font-weight: 400;
+  margin: 0;
+  padding: 0;
   font-family: "Noto Sans TC", sans-serif;
 }
 
 #wrapper {
-  overflow-anchor: none;
-  height: 100%;
-  overflow-y: scroll;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
+ 
+  overflow: scroll;
+  overflow-x: hidden;
   scroll-snap-type: y mandatory;
+  /* Reserve space for header and additional space so above page are visible a bit*/
+  scroll-padding-top: calc(var(--bar-height));
+  scroll-padding-top: calc(var(--bar-height) + var(--extra-space));
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--bar-height) 0 0 0;
+  /* Enable Safari touch scrolling physics which is needed for scroll snap */
+  -webkit-overflow-scrolling: touch;
 }
-.Myfont{
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 1em;
-line-height: 19px;
+
+.Myfont {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 19px;
 }
+
 .EachPage {
+  scroll-snap-align: start;
+  height: 100vh;
   min-height: 100svh;
   display: flex;
   flex-direction: column;
-  scroll-snap-align: start;
 }
 
 #MainNav {
-  position: sticky;
+  width: 100vw;
+  position: fixed;
   background-color: #ffffff;
   display: flex;
   flex-direction: row;
-  min-height: 15svh;
+  height: var(--bar-height);
+  min-height: var(--bar-height);
   align-items: center;
   top: 0;
   z-index: 9;
@@ -94,13 +109,17 @@ line-height: 19px;
 
 #Main_Sec1 {
   /* flex: 399; */
-  height: 60%;
+  /* height: 60%; */
+  /* DONT PUT ANY HEIGHT IN SCROLL SNAP!!!!!!!! */
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  background-image: url(./Asset/image/Home_repeat.jpg);
+  background-repeat: repeat;
 }
 
 #Main_Sec1>img {
+  height: clamp(10vw + 10em, 15vw , 35vw + 20em);
   transform: translateY(25%);
 }
 
@@ -116,39 +135,41 @@ line-height: 19px;
   font-size: 3em;
 }
 
-#Main_Sec2>p {
-  font-size: 1em;
+#Page1 #Main_Sec2 p {
+  font-size: clamp(1.25rem, 0.9375rem + 1.6667vw, 1.875rem);
+  text-align: center;
 }
 
 /* PAGE 2 CSS  */
 #page2 {
-  align-items: center;
   justify-content: flex-end;
 }
 
 #cardWrapp {
   flex: 2;
-  font-size: 2em;
+  font-size: clamp(1.25rem, 0.9375rem + 1.6667vw, 1.875rem);
   gap: 7vw;
   display: grid;
-  grid-template-columns: repeat(var(--CARD-SIZE), minmax(20vw, 1fr));
-  grid-template-rows: minmax(20vw, 1fr) 3em;
+  grid-template-columns: repeat(var(--CARD-SIZE), minmax(15vw, 17vw));
+  grid-template-rows: repeat(2, auto);
+  align-self: center;
 }
 
 #P2Sec1 {
   width: 100%;
-  flex: 2;
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .Card {
-  border-radius: 45px;
+  border-radius: 10px;
   background-color: #b8b7b7;
   color: #ffffff;
   display: flex;
   justify-content: space-around;
+  aspect-ratio: 1 ;
   align-items: flex-end;
 }
 
@@ -183,11 +204,25 @@ line-height: 19px;
 }
 
 #IMG2 {
-  height: 45svh;
-  transform: translateY(10px);
-  clip-path: polygon(40% 0, 85% 0, 85% 100%, 40% 100%);
+  flex-basis: 30%;
+      height: clamp(10vw + 10em, 15vw , 35vw + 20em);
 }
-
+.Page3Sec2{
+  display: flex;
+  flex-direction: row;
+  background-color: #ffcd93;
+}
+.Page3Sec2 p {
+  font-size: clamp(1rem, 0.875rem + 0.6667vw, 1.25rem);
+}
+@media only screen and (max-width: 550px) {
+ .Page3Sec2{
+  display: inline-block;
+}
+#page3{
+  transform: translateY(10vh);
+}
+}
 #page4 {
   justify-content: center;
   align-items: center;
@@ -203,9 +238,10 @@ line-height: 19px;
   display: flex;
   overflow-x: auto;
   scrollbar-color: rgba(255, 255, 255);
-
+  gap: 25vw;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
+  overflow-anchor: none;
 }
 
 .slides::-webkit-scrollbar {
@@ -253,6 +289,10 @@ line-height: 19px;
 }
 
 .Eachslide>p {
-  min-width: 40em;
-  max-width: 45em;
+font-size: clamp(0.75rem, 0.7054rem + 0.2381vw, 1rem);
+}
+.imgShrink{
+    /* height: clamp(10vw + 10em, 15vw , 25vw + 20em); */
+    width: 208px;
+    height: 208px;
 }

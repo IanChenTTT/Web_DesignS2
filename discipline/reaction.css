@@ -172,25 +172,6 @@ body {
   text-align: center;
 }
 
-/* #page2 button {
-  width:949px;
-  height: 50px;
-  margin-left: 245px;
-  border:2px blue none;
-  background-color: #ffffff; 
-  font-size: 25px;
-  border-radius: 16px;
-  border-bottom: 1px solid black;
-  cursor: pointer;
-} */
-
-/* #page2 button:hover {
-  background-color: #ffcd93;
-  color: rgb(255, 140, 0);
-  font-weight: bold;
-  letter-spacing: 0.29em;
-} */
-
 .accordion {
   width: 949px;
   height: 78px;
@@ -220,25 +201,6 @@ button {
   cursor: pointer;
 }
 /*  page3 start*/
-/* #page3 button {
-  width:949px;
-  height: 50px;
-  margin-left: 245px;
-  border:2px blue none;
-  background-color: #ffffff; 
-  font-size: 25px;
-  border-radius: 16px;
-  border-bottom: 1px solid black;
-  cursor: pointer; 
-} */
-
-/* #page3 button:hover {
-  background-color: #ffcd93;
-  color: rgb(255, 140, 0);
-  font-weight: bold;
-  letter-spacing: 0.29em;
-} */
-
 #P3Sec1 {
   width: 100%;
   margin-top: 420px;
@@ -248,4 +210,3 @@ button {
   text-align: center;
 }
 /* page3 end */
-/* page6 start */

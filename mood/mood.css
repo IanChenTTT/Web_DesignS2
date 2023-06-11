@@ -2,7 +2,7 @@
 body {
     width: 100svw;
     min-width: fit-content;
-    height: 360vh;
+    height: 3331px;
     margin: 0;
     padding: 0;
     background-color: #fff1e3;
@@ -44,7 +44,7 @@ body {
     min-width: 64px;
   }
   .container_grid{
-    height:360vh;
+    height:3331px;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
   }
@@ -59,7 +59,31 @@ body {
     border-radius: 40px;
     width: 100%;
     height: 60%;
-    box-shadow: 5px 5px 18px;
+    box-shadow: 5px 5px 18px black;
+  }
+  .img_overlay{
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    color: #ffffff;
+    background:rgba(0,0,0,0);
+    transition: 0.25s;
+  }
+  .img_overlay:hover{
+    background:rgba(255,255,255,0.3);
+    backdrop-filter: blur(3px);
+  }
+  .img_overlay>p{
+    font-size: 3em;
+    transform: translateY(30px);
+    transition: transform 0.25s;
+  }
+  .img_overlay:hover>p{
+    align-self: center;
+    transform: translateY(0);
   }
   .img-1{
     background-image: url(./image/生氣02.jpg);
@@ -91,11 +115,6 @@ body {
   .items-0-img{
     background-image: url(./image/0.jpeg);
     background-size: cover;
-  }
-  @media (max-width: 100px) {
-    .item{
-      grid-template-columns: 10px 10px;
-    }
   }
   .items-1-img{
     background-image: url(./image/1.jpg);

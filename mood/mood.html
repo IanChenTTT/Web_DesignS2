@@ -41,7 +41,11 @@
         </div>
         <div class="item-grid">
             <h1>貓貓生氣</h1>
+
+            <div id="invisable0" class="hover_img0"></div>
+
             <div class="full"></div>
+
             <div class="item">
                 <div class="items-0-img">
                     <div class="s">
@@ -72,6 +76,7 @@
         </div>
         <div class="item-grid">
             <h1>貓貓安心</h1>
+            <div id="invisable1" class="hover_img1"></div>
             <div class="item">
                 <div class="items-0-img">
                     <div class="s">
@@ -97,6 +102,7 @@
         </div>
         <div class="item-grid">
             <h1>貓貓害怕</h1>
+            <div id="invisable2" class="hover_img2"></div>
             <div class="item">
                 <div class="items-0-img">
                     <div class="s">
@@ -157,6 +163,37 @@
                 audio03.pause();
                 audio03.currentTime = 0; // 將播放時間重設為0，以便下次點擊時重新播放
             }
+            });
+        function scrolldiv(val) {
+            const collection = document.getElementsByClassName("item-grid")
+            window.scrollTo(0,findPosition(collection[val]))
+            let image = document.getElementById(`invisable${val}`)
+
+            let text = document.getElementsByClassName('items-text')
+            text[val] .classList.add("text_animation");
+
+            image.classList.add("full");
+        }    
+        function findPosition(obj) {
+                var currenttop = 0;
+                if (obj.offsetParent) {
+                    do {
+                        currenttop += obj.offsetTop;
+                    } while ((obj = obj.offsetParent));
+                    return [currenttop];
+                }
+            }        
+        document.getElementById('img_hover1').
+            addEventListener('click',function(event){
+                scrolldiv(0)
+            });
+        document.getElementById('img_hover2').
+            addEventListener('click',function(event){
+                scrolldiv(1)
+            });
+        document.getElementById('img_hover3').
+            addEventListener('click',function(event){
+                scrolldiv(2)
             });
       </script>
 </body>

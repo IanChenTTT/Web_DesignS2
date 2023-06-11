@@ -1,157 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;700;900&display=swap");
+
+html {
+  height: 100%;
+}
+
+*::-webkit-scrollbar {
+  width: 4px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #fff1e3;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #95c2ea;
+  border-radius: 10px;
+  border: 3px none #ffffff;
+}
+:root{
+  --CARD-SIZE: 2;
+}
 body {
-    background-color: bisque;
-    width: 100svw;
-    height: 220vh;
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-    font-weight: 400;
+  width: 100svw;
+  min-width: fit-content;
+  height: 100svh;
+  margin: 0;
+  padding: 0;
+  background-color: #fff1e3;
+  /* font-size: 16px; */
+  font-weight: 400;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+#wrapper {
+  overflow-anchor: none;
+  height: 100%;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  scroll-snap-type: y mandatory;
+}
+
+.EachPage {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
 }
 
 #MainNav {
-    background-color: #ffffff;
-    position: sticky;
-    display: flex;
-    flex-direction: row;
-    min-height: 15svh;
-    align-items: center;
-    top: 0;
-    z-index: 9;
-    font-size: 1em;
+  position: sticky;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  min-height: 15svh;
+  align-items: center;
+  top: 0;
+  z-index: 9;
+  font-size: 1em;
+  padding-left: 12.8vw;
+  padding-right: 12.8vw;
+  /* This make cat behind nav */
+  /* 1232 length on figma */
 }
 
 #NavLeft {
-    flex: 160;
+  flex: 160;
 }
 
 #NavMid {
-    flex: 691;
-  }
+  flex: 691;
+}
 
 #NavRight {
-    flex: 380;
-    display: flex;
-    flex-direction: row;
+  flex: 380;
+  display: flex;
+  flex-direction: row;
 }
 
 #NavRight>div {
-    padding-right: 2em;
-    flex-grow: 1;
-    overflow: hidden;
-    min-width: 64px;
+  padding-right: 2em;
+  flex-grow: 1;
+  overflow: hidden;
+  min-width: 64px;
 }
 
-#container {
-    align-items: center;
-    justify-content: flex-end;
+/* page1 start */
+#page1 {
+  align-items: center;
+  justify-content: flex-end;
 }
 
-#center-title {
-    text-align: center;
-    font-size: 40px;
-    /* margin-top: 20svh; */
-    margin-bottom: -5svh;
+#cardWrapp {
+  flex: 2;
+  font-size: 2em;
+  gap: 7vw;
+  display: grid;
+  grid-template-columns: repeat(var(--CARD-SIZE),15vw);
+  grid-template-rows: 15vw 3em;
 }
 
-.wrong, .right {
-    height: 100%;
-    margin-bottom: 15svh;
+#P1Sec1 {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#wrong-way, #right-way {
-    background-color: #ffffff;
-    border-radius: 16px;
-    font-size: 32px;
-    width: 929px;
-    height: 78px;
-    
-    margin-bottom: -32px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    border-bottom: 1px solid black;
-    line-height: 78px;
+#P1Sec1 h3 {
+  margin-top: auto;
 }
 
-#wrong-way:hover, #right-way:hover {
-    background-color: #ffcd93;
-    color: rgb(255, 140, 0);
-    font-weight: bold;
-    letter-spacing: 0.29em;
+.Card {
+  border-radius: 45px;
+  /* background-color: #b8b7b7; */
+  color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  font-size: clamp(1rem, -0.0922rem + 1.75vw, 3.5rem);
 }
 
- .wrongway_whole1 h2 {
-    font-size: 32px;
-    color: rgb(255, 140, 0);
-    margin: 20px;
-    padding-top: 90px;
-    padding-right: 450px;
+#P1Card1 {
+  background-image: url(./img/錯誤管教1.jpeg);
+  background-size: cover;
 }
 
-.wrongway_whole2 h2 {
-    font-size: 32px;
-    color: rgb(255, 140, 0);
-    margin: 20px;
-    padding-top: 90px;
-    padding-right: 420px;
+#P1Card2 {
+  background-image: url(./img/錯誤管教2.jpeg);
+  background-size: cover;
 }
 
-.rightway_whole1 h2 {
-    font-size: 32px;
-    color: rgb(255, 140, 0);
-    margin: 20px;
-    padding-top: 90px;
-    padding-right: 570px;
+.hidecard {
+  display: none;
+  width: 15vw;
+  font-size: clamp(0.8rem, -0.0922rem + 1.15vw, 3.1rem);
 }
 
-.wrongway_whole1 {
-    width: 929px;
-    height: 468px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #ffcd93;
-    border-radius: 16px;
-    text-align: center;
+.Card:hover {
+  opacity: 0.5;
 }
 
-.wrongway_whole2 {
-    width: 929px;
-    height: 468px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #ffcd93;
-    border-radius: 16px;
-    text-align: center;
+.Card:hover>p {
+  align-self: center;
 }
 
-.rightway_whole1 {
-    width: 929px;
-    height: 468px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #ffcd93;
-    border-radius: 16px;
-    text-align: center;
+#P1Card1:hover~#CardHide1 {
+  display: block;
+  color:#000000;
 }
 
-.wrongway_whole1 p {
-    /* text-indent: 2em; */
-    margin: 0 85px 0 85px;
-    font-size: 1.5vw;
-    text-align: justify;
-    margin-top: 50px;
+#P1Card2:hover~#CardHide2{
+  display: block;
+  color: #000000;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
 
-.wrongway_whole2 p {
-    margin: 0 85px 0 85px;
-    font-size: 1.5vw;
-    text-align: justify;
-    margin-top: 50px;
+/* page1 end */
+/* page2 start */
+#P2Sec1 {
+  width: 100%;
+  margin-top: 170px;
 }
 
-.rightway_whole1 p {
-    margin: 0 85px 0 85px;
-    font-size: 1.5vw;
-    text-align: justify;
-    margin-top: 50px;
+#P2Sec1 h3 {
+  text-align: center;
 }
+
+/* #page2 button {
+  width:949px;
+  height: 50px;
+  margin-left: 245px;
+  border:2px blue none;
+  background-color: #ffffff; 
+  font-size: 25px;
+  border-radius: 16px;
+  border-bottom: 1px solid black;
+  cursor: pointer;
+} */
+
+/* #page2 button:hover {
+  background-color: #ffcd93;
+  color: rgb(255, 140, 0);
+  font-weight: bold;
+  letter-spacing: 0.29em;
+} */
+
+.accordion {
+  width: 949px;
+  height: 78px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffcd93;
+}
+
+.accordion-button:hover {
+  background-color: #ffcd93;
+  color: rgb(255, 140, 0);
+  font-weight: bold;
+  letter-spacing: 0.29em;
+}
+
+.accordion-button:click {
+  background-color: #ffcd93;
+  color: rgb(255, 140, 0);
+  font-weight: bold;
+  letter-spacing: 0.29em;
+}
+
+button {
+  font-size: 25px;
+  border-radius: 16px;
+  border-bottom: 1px solid black;
+  cursor: pointer;
+}
+/*  page3 start*/
+/* #page3 button {
+  width:949px;
+  height: 50px;
+  margin-left: 245px;
+  border:2px blue none;
+  background-color: #ffffff; 
+  font-size: 25px;
+  border-radius: 16px;
+  border-bottom: 1px solid black;
+  cursor: pointer; 
+} */
+
+/* #page3 button:hover {
+  background-color: #ffcd93;
+  color: rgb(255, 140, 0);
+  font-weight: bold;
+  letter-spacing: 0.29em;
+} */
+
+#P3Sec1 {
+  width: 100%;
+  margin-top: 420px;
+}
+
+#P3Sec1 h3 {
+  text-align: center;
+}
+/* page3 end */
+/* page6 start */

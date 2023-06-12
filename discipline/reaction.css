@@ -33,6 +33,7 @@ body {
 }
 
 #wrapper {
+  background-color: #fff1e3;
   overflow-anchor: none;
   height: 100%;
   overflow-y: scroll;
@@ -187,12 +188,12 @@ body {
   letter-spacing: 0.29em;
 }
 
-.accordion-button:click {
+/* .accordion-button:click {
   background-color: #ffcd93;
   color: rgb(255, 140, 0);
   font-weight: bold;
   letter-spacing: 0.29em;
-}
+} */
 
 button {
   font-size: 25px;
@@ -210,3 +211,4 @@ button {
   text-align: center;
 }
 /* page3 end */
+

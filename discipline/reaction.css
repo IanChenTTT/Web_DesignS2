@@ -188,13 +188,6 @@ body {
   letter-spacing: 0.29em;
 }
 
-/* .accordion-button:click {
-  background-color: #ffcd93;
-  color: rgb(255, 140, 0);
-  font-weight: bold;
-  letter-spacing: 0.29em;
-} */
-
 button {
   font-size: 25px;
   border-radius: 16px;

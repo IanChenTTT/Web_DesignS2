@@ -232,49 +232,6 @@ body {
 }
 .hover_img2{
   background-image: url(./image/2.png);
-=======
-  width: 100svw;
-  min-width: fit-content;
-  height: 3331px;
-  margin: 0;
-  padding: 0;
-  background-color: #fff1e3;
-  font-size: 16px;
-  font-weight: 400;
-  font-family: "Noto Sans TC", sans-serif;
-}
-#MainNav {
-  position: sticky;
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: row;
-  min-height: 15svh;
-  align-items: center;
-  top: 0;
-  z-index: 9;
-  font-size: 1em;
-  /* This make cat behind nav */
-  /* 1232 length on figma */
-}
-#NavLeft {
-  flex: 160;
-}
-
-#NavMid {
-  flex: 691;
-}
-
-#NavRight {
-  flex: 380;
-  display: flex;
-  flex-direction: row;
-}
-
-#NavRight>div {
-  padding-right: 2em;
-  flex-grow: 1;
-  overflow: hidden;
-  min-width: 64px;
 }
 .container_grid {
   height: 3331px;

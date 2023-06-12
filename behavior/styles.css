@@ -75,3 +75,9 @@ body {
     padding-right: 10%;
     height: 60%; 
   }
+  @media (max-width: 607px){
+    .item{
+      grid-template-columns: 90%;
+      grid-template-rows: 45% 45%;
+    }
+  }

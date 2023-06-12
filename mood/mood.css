@@ -155,12 +155,10 @@ body {
     justify-content: space-evenly;
     align-items: center;
   }
-  .sound_img{
-  }
   button{
     padding: 0;
     margin-left: 10px;
-    font-size: 1.3em;
+    font-size: clamp(0.75rem, 0.3962rem + 1.8868vw, 1.5rem);
     font-weight: bold;
     color: #ff9d23;
     border: 0ch;
@@ -193,11 +191,11 @@ body {
   }
   .full{
     width: 100%;
-    height: 80vh;
+    height: 90vh;
     background-position: center;
     background-size: cover;
     position: absolute;
-    animation: moveAndDisappear 3s forwards;
+    animation: moveAndDisappear 2s forwards;
 }
 
 @keyframes moveAndDisappear {
@@ -212,7 +210,7 @@ body {
     }
 }
 .text_animation{
-  animation: movein 3s forwards cubic-bezier(0.21, 0.51, 0.34, 0.99);
+  animation: movein 5s forwards cubic-bezier(0.21, 0.51, 0.34, 0.99);
 }
 @keyframes movein {
   0% {
@@ -233,4 +231,61 @@ body {
 }
 .hover_img2{
   background-image: url(./image/2.png);
+}
+@media (max-width: 1900px){
+  .sound_1{
+    width:13vw;
+  }
+}
+@media (max-width: 1600px){
+  .sound_1{
+    width:17vw;
+  }
+}
+@media (max-width: 1300px){
+  .sound_1{
+    width:20vw;
+  }
+}
+
+@media (max-width: 1100px){
+  .sound_1{
+    width:24vw;
+  }
+  .s>img{
+    width:80%;
+    height: 60%;
+    align-content: center;
+  }
+}
+@media (max-width: 948px){
+  .sound_1{
+    width:28vw;
+  }
+}
+
+@media (max-width: 837px){
+  .sound_1{
+    width:32vw;
+  }
+}
+
+@media (max-width: 607px){
+  .item{
+    grid-template-columns: 90%;
+    grid-template-rows: 45% 45%;
+  }
+  .sound_1{
+    width:34vw;
+  }
+  .s>img{
+    width:100%;
+    height: 100%;
+    align-content: center;
+  }
+}
+@media (max-width: 285px){
+  .sound_1{
+    width:36vw;
+  }
 }

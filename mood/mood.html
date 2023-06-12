@@ -176,7 +176,8 @@
                     do {
                         currenttop += obj.offsetTop;
                     } while ((obj = obj.offsetParent));
-                    return [currenttop];
+                    return [currenttop-180]; 
+                    // 調整滑進的視窗大小
                 }
             }        
         document.getElementById('img_hover1').

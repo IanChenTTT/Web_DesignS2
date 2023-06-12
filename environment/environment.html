@@ -1,0 +1,119 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="./environment.css">
+   
+</head>
+
+<body>
+    <div class="full"></div>
+    <div id="main" class="container">
+        <div class="left">
+            <img src="cat.jpeg" alt="Sleeping Cat zzZ">
+        </div>
+        <div class="right fade-in">
+            <h2 id="h2_o">新手貓奴養貓須知<span id="orange">環境篇</span></h2>
+            <p>養貓咪是一個重要的決定，貓咪的壽命大約在10-15年左右，為一個生命負起責任需要萬全的準備。</p>
+            <p>貓咪是非常重視環境的動物，好的生活空間可以使牠們更快地適應。</p>
+        </div>
+    </div>
+    <div class="container2">
+        <div id="list">
+            <button onclick="moveCatToButton(event,1)">1</button>
+            <button onclick="moveCatToButton(event,2)">2</button>
+            <button onclick="moveCatToButton(event,3)">3</button>
+            <button onclick="moveCatToButton(event,4)">4</button>
+            <button onclick="moveCatToButton(event,5)">5</button>
+        </div>
+        <div id="catgif">
+            <img src="cat.gif">
+        </div>
+        <div id="content">
+            <h2 id="title">完善的活動空間</h2>
+            <p id="detail">規劃出幾個活動區塊，周邊留下足夠空間，像是：食碗和水碗、貓砂盆、貓跳台等，都建議在周邊留下一些空間，起碼要讓貓咪可以舒適的活動。</p>
+        </div>
+
+    </div>
+
+
+    <script>
+        let initialCatPosition = 0;
+        let initialWindowWidth = window.innerWidth;
+        let previousButtonIndex = 0; 
+
+        function moveCatToButton(event, buttonIndex) {
+            const title = document.getElementById('title');
+            const detail = document.getElementById('detail');
+            switch (buttonIndex) {
+                case 1:
+                    title.textContent = "完善的活動空間";
+                    detail.textContent = "規劃出幾個活動區塊，周邊留下足夠空間，像是：食碗和水碗、貓砂盆、貓跳台等，都建議在周邊留下一些空間，起碼要讓貓咪可以舒適的活動。";
+                    
+                    break;
+                case 2:
+                    title.textContent = "貓砂盆、食碗、水碗要分開擺放";
+                    detail.textContent = "貓砂盆不要放在食碗或水碗旁邊，因為這等於叫貓咪在廁所旁邊吃飯喝水，其實對於貓咪來說會不太舒服。食碗和水碗也盡量分開擺放，以免飲水被感染導致貓咪不喝水。";
+                    break;
+                case 3:
+                    title.textContent = "更換窗簾、沙發、地毯等家具設備";
+                    detail.textContent = "窗簾和沙發都可以使用貓抓布或貓抓皮，這種材質的布料因為耐磨擦，可以降低貓咪抓咬的慾望，使用寵物地毯也可以降低貓咪跳躍到地板上的傷害。";
+                    break;
+                case 4:
+                    title.textContent = "保持環境和物品的潔淨";
+                    detail.textContent = "貓咪是很愛乾淨的動物，如果食碗或水碗被汙染，貓咪可能會不吃不喝，也會拒絕在骯髒的貓砂盆內上廁所，導致影響健康，不乾淨的環境也會容易染上寄生蟲。";
+                    break;
+                case 5:
+                    title.textContent = "保護措施要做好";
+                    detail.textContent = "新來的貓咪可能會害怕環境而想要逃家，所以如果家中有對外窗，要特別做好防護措施加裝防護網，避免貓咪跳出窗外受傷或失蹤。";
+                    break;
+            }
+
+
+
+            const button = event.target;
+            const cat = document.querySelector('#catgif img');
+
+            const buttonX = button.getBoundingClientRect().left;
+            const catX = cat.getBoundingClientRect().left;
+            const catWidth = cat.clientWidth;
+
+            const catTargetX = buttonX - catWidth / 2;
+            const direction = catX < buttonX ? 'right' : 'left';
+
+            cat.style.left = `${catTargetX}px`;
+
+            if (direction === 'right') {
+                cat.classList.remove('flip-horizontal');
+            } else {
+                cat.classList.add('flip-horizontal');
+            }
+
+            previousButtonIndex = buttonIndex;
+        }
+
+        function adjustCatPosition() {
+            const cat = document.querySelector('#catgif img');
+            const catWidth = cat.clientWidth;
+
+            const windowWidth = window.innerWidth;
+
+
+            if (previousButtonIndex) {
+                const buttons = document.querySelectorAll('#list button');
+                const button = buttons[previousButtonIndex - 1];
+                const buttonX = button.getBoundingClientRect().left;
+                const buttonWidth = button.clientWidth;
+
+                const catPosition = (buttonX + buttonWidth / 2 - catWidth / 2) / windowWidth * 100;
+                cat.style.left = `${catPosition}%`;
+            }
+        }
+
+
+
+        window.addEventListener('resize', adjustCatPosition);
+
+    </script>
+</body>
+
+</html>

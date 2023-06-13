@@ -208,11 +208,12 @@ body {
 
 #cardWrapp {
   flex: 2;
-  font-size: clamp(1.25rem, 0.9375rem + 1.6667vw, 1.875rem);
+  font-size: clamp(2rem, 0.9375rem + 1.6667vw, 1.875rem);
   gap: 7vw;
   display: grid;
   grid-template-columns: repeat(var(--CARD-SIZE), minmax(15vw, 17vw));
-  grid-template-rows: repeat(2, auto);
+  gap: 4ch;
+  grid-template-rows: minmax(15vw, 17vw) 2vh;
   align-self: center;
 }
 
@@ -230,12 +231,14 @@ body {
   color: #ffffff;
   display: flex;
   justify-content: space-around;
-  aspect-ratio: 1;
+  aspect-ratio: 1 / 1;
   align-items: flex-end;
 }
 
 .hidecard {
-  display: none;
+  /* display: none; */
+  visibility: hidden;
+  font-size: clamp(1rem, 0.9639rem + 0.2312vw, 1.25rem);
 }
 
 .Card:hover {
@@ -245,9 +248,33 @@ body {
 .Card:hover>p {
   align-self: center;
 }
+#P2Card1{
+  background-image: url(./Asset/image/Home_card1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#P2Card2{
+  background-image: url(./Asset/image/Home_card2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#P2Card3{
+  background-image: url(./Asset/image/Home_card3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 #P2Card1:hover~#CardHide1 {
-  display: block;
+  /* display: block; */
+  visibility: visible;
+  color: red;
+}
+#P2Card2:hover~#CardHide2 {
+  visibility: visible;
+  color: red;
+}
+#P2Card3:hover~#CardHide3 {
+  visibility: visible;
   color: red;
 }
 

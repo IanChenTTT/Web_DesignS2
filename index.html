@@ -1,215 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css" />
-  </head>
 
-  <body>
-    <div id="wrapper">
-      <div id="MainNav">
-        <div id="NavLeft">
-          <img src="./Image/logo.svg" alt="" />
-        </div>
-        <div id="NavMid"></div>
-        <div id="NavRight">
-          <div>Home</div>
-          <div>行為百科</div>
-          <div>新手百科</div>
-          <div>聯絡我們</div>
-        </div>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
 
-      <!-- Page1 -->
-      <div id="Page1" class="EachPage">
-        <div id="Main_Sec1">
-          <img src="Image/IMG_5602 1.png" alt="" />
-        </div>
-        <div id="Main_Sec2">
-          <h1>關於網站</h1>
-          <p>
-            透過深入介紹貓的行為與心情習性，
-            希望能讓想飼養貓或是喜歡貓的人們能夠
-            <br />
-            對牠們有更深一層的認識， 也期許大家能夠以領養代替購買。
-          </p>
-        </div>
+<body>
+  <div class="navbar">
+    <a href="index.html"id="logo"><img src="image/logo.svg" href="index.html" ></a>
+    <a href="./contact/index.html">聯絡我們</a>
+    <div class="dropdown">
+      <button class="dropbtn">新手百科
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="./mood/mood.html">貓咪情緒</a>
+        <a href="./behavior/behavior.html">貓咪行為</a>
+        <a href="./discipline/reaction.html">貓咪管教</a>
       </div>
-      <!-- Page1 End -->
-      <!-- Page2 -->
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">行為百科
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="./Daily/Daily.html">日用品</a>
+        <a href="./environment/environment.html">環境篇</a>
+      </div>
+    </div>
+    <a href="index.html">Home</a>
+  </div>
+  <div id="wrapper">
 
-      <div id="page2" class="EachPage">
-        <div id="P2Sec1">
-          <h2></h2>
-          <h2 style="font-size: 2em">清單</h2>
-        </div>
-        <div id="cardWrapp">
-          <div class="Card" id="P2Card1">
-            <p>聯絡我們</p>
-          </div>
-          <div class="Card" id="P2Card2">
-            <p>新手百科</p>
-          </div>
-          <div class="Card" id="P2Card3">
-            <p>聯絡我們</p>
-          </div>
-          <div id="CardHide1" class="hidecard">lor</div>
-          <div id="CardHide2" class="hidecard"></div>
-          <div id="CardHide3" class="hidecard"></div>
-        </div>
+
+    <!-- Page1 -->
+    <div id="Page1" class="EachPage">
+      <div id="Main_Sec1">
+        <img src="Image/IMG_5602 1.png" alt="" />
       </div>
-      <!-- Page2 end -->
-      <!-- Page3  -->
-      <div id="page3" class="EachPage">
-        <div id="Main_Sec1" style="height: 50%">
-          <h2 style="font-size: 2em">領養代替購買</h2>
-          <svg
-            xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:cc="http://web.resource.org/cc/"
-            xmlns:dc="http://purl.org/dc/elements/1.1/"
-            xmlns:svg="http://www.w3.org/2000/svg"
-            id="svg2"
-            viewBox="0 0 400 380"
-            version="1.0"
-            width="100%"
-            height="100%"
-          >
-            <path
-              id="path1891"
-              fill-rule="evenodd"
-              d="m151.35 307.2h113c0-16.06-1.15-19.25-27.75-19.25 4.25-12.75 21.52-43.59 31.12-43.59 8.5 0 18.63 0.47 18.63 19.84 0 22 37.02 57.48 46 43 13.38-21.56-23-14.98-23-67 0-71.15 41.52-61.02 41.52-101 0-20-5.52-22.7-5.52-37 0-18.893 16.65-17.796 13.41-33.465-2.24-10.823-3.99-19.503-5.29-32.591-0.93-9.287-1.23-19.185-10.87-18.787-11.33 0.468-15.63 20.417-33.25 21.848-17.58 1.427-32.57-14.967-39.38-12.625-6.74 2.321-4.62 20.625-0.62 33.625 6.29 20.432 20 46.995-5 50.995s-68 8-99 49-29.86 89.12-42 104c-40.759 49.96-82.526 29.45-82.526 71 0 18.61 31.525 32 36.525 26s-42.485-23.87 10.646-45c45.395-18.04 49.445-21.72 63.355-9z"
-            />
-            <metadata>
-              <rdf:RDF>
-                <cc:Work>
-                  <dc:format>image/svg+xml</dc:format>
-                  <dc:type
-                    rdf:resource="http://purl.org/dc/dcmitype/StillImage"
-                  />
-                  <cc:license
-                    rdf:resource="http://creativecommons.org/licenses/publicdomain/"
-                  />
-                  <dc:publisher>
-                    <cc:Agent rdf:about="http://openclipart.org/">
-                      <dc:title>Openclipart</dc:title>
-                    </cc:Agent>
-                  </dc:publisher>
-                  <dc:title>Cat silhouette</dc:title>
-                  <dc:date>2006-11-03T05:40:34</dc:date>
-                  <dc:description
-                    >Silhouette of a cat. \n \nFrom
-                    http://commons.wikimedia.org/wiki/Image:Cat_silhouette.svg</dc:description
-                  >
-                  <dc:source
-                    >http://openclipart.org/detail/1198/cat-silhouette-by-liftarn</dc:source
-                  >
-                  <dc:creator>
-                    <cc:Agent>
-                      <dc:title>liftarn</dc:title>
-                    </cc:Agent>
-                  </dc:creator>
-                  <dc:subject>
-                    <rdf:Bag>
-                      <rdf:li>animal</rdf:li>
-                      <rdf:li>cat</rdf:li>
-                      <rdf:li>clip art</rdf:li>
-                      <rdf:li>clipart</rdf:li>
-                      <rdf:li>externalsource</rdf:li>
-                      <rdf:li>image</rdf:li>
-                      <rdf:li>media</rdf:li>
-                      <rdf:li>png</rdf:li>
-                      <rdf:li>public domain</rdf:li>
-                      <rdf:li>silhouette</rdf:li>
-                      <rdf:li>svg</rdf:li>
-                      <rdf:li>wikimedia commons</rdf:li>
-                    </rdf:Bag>
-                  </dc:subject>
-                </cc:Work>
-                <cc:License
-                  rdf:about="http://creativecommons.org/licenses/publicdomain/"
-                >
-                  <cc:permits
-                    rdf:resource="http://creativecommons.org/ns#Reproduction"
-                  />
-                  <cc:permits
-                    rdf:resource="http://creativecommons.org/ns#Distribution"
-                  />
-                  <cc:permits
-                    rdf:resource="http://creativecommons.org/ns#DerivativeWorks"
-                  />
-                </cc:License>
-              </rdf:RDF>
-            </metadata>
-          </svg>
+      <div id="Main_Sec2">
+        <h1>關於網站</h1>
+        <p>
+          透過深入介紹貓的行為與心情習性，
+          希望能讓想飼養貓或是喜歡貓的人們能夠
+          <br />
+          對牠們有更深一層的認識， 也期許大家能夠以領養代替購買。
+        </p>
+      </div>
+    </div>
+    <!-- Page1 End -->
+    <!-- Page2 -->
+
+    <div id="page2" class="EachPage">
+      <div id="P2Sec1">
+        <h2></h2>
+        <h2 style="font-size: 2em">清單</h2>
+      </div>
+      <div id="cardWrapp">
+        <div class="Card" id="P2Card1">
+          <p>聯絡我們</p>
         </div>
-        <div class="Page3Sec2">
-          <img id="IMG2" src="Asset/image/領養代替購買.gif" alt="" />
-          <p
-            style="
+        <div class="Card" id="P2Card2">
+          <p>新手百科</p>
+        </div>
+        <div class="Card" id="P2Card3">
+          <p>聯絡我們</p>
+        </div>
+        <div id="CardHide1" class="hidecard">lor</div>
+        <div id="CardHide2" class="hidecard"></div>
+        <div id="CardHide3" class="hidecard"></div>
+      </div>
+    </div>
+    <!-- Page2 end -->
+    <!-- Page3  -->
+    <div id="page3" class="EachPage">
+      <div id="Main_Sec1" style="height: 50%">
+        <h2 style="font-size: 2em">領養代替購買</h2>
+        <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg"
+          xmlns:cc="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xmlns:svg="http://www.w3.org/2000/svg" id="svg2" viewBox="0 0 400 380" version="1.0" width="100%"
+          height="100%">
+          <path id="path1891" fill-rule="evenodd"
+            d="m151.35 307.2h113c0-16.06-1.15-19.25-27.75-19.25 4.25-12.75 21.52-43.59 31.12-43.59 8.5 0 18.63 0.47 18.63 19.84 0 22 37.02 57.48 46 43 13.38-21.56-23-14.98-23-67 0-71.15 41.52-61.02 41.52-101 0-20-5.52-22.7-5.52-37 0-18.893 16.65-17.796 13.41-33.465-2.24-10.823-3.99-19.503-5.29-32.591-0.93-9.287-1.23-19.185-10.87-18.787-11.33 0.468-15.63 20.417-33.25 21.848-17.58 1.427-32.57-14.967-39.38-12.625-6.74 2.321-4.62 20.625-0.62 33.625 6.29 20.432 20 46.995-5 50.995s-68 8-99 49-29.86 89.12-42 104c-40.759 49.96-82.526 29.45-82.526 71 0 18.61 31.525 32 36.525 26s-42.485-23.87 10.646-45c45.395-18.04 49.445-21.72 63.355-9z" />
+          <metadata>
+            <rdf:RDF>
+              <cc:Work>
+                <dc:format>image/svg+xml</dc:format>
+                <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+                <cc:license rdf:resource="http://creativecommons.org/licenses/publicdomain/" />
+                <dc:publisher>
+                  <cc:Agent rdf:about="http://openclipart.org/">
+                    <dc:title>Openclipart</dc:title>
+                  </cc:Agent>
+                </dc:publisher>
+                <dc:title>Cat silhouette</dc:title>
+                <dc:date>2006-11-03T05:40:34</dc:date>
+                <dc:description>Silhouette of a cat. \n \nFrom
+                  http://commons.wikimedia.org/wiki/Image:Cat_silhouette.svg</dc:description>
+                <dc:source>http://openclipart.org/detail/1198/cat-silhouette-by-liftarn</dc:source>
+                <dc:creator>
+                  <cc:Agent>
+                    <dc:title>liftarn</dc:title>
+                  </cc:Agent>
+                </dc:creator>
+                <dc:subject>
+                  <rdf:Bag>
+                    <rdf:li>animal</rdf:li>
+                    <rdf:li>cat</rdf:li>
+                    <rdf:li>clip art</rdf:li>
+                    <rdf:li>clipart</rdf:li>
+                    <rdf:li>externalsource</rdf:li>
+                    <rdf:li>image</rdf:li>
+                    <rdf:li>media</rdf:li>
+                    <rdf:li>png</rdf:li>
+                    <rdf:li>public domain</rdf:li>
+                    <rdf:li>silhouette</rdf:li>
+                    <rdf:li>svg</rdf:li>
+                    <rdf:li>wikimedia commons</rdf:li>
+                  </rdf:Bag>
+                </dc:subject>
+              </cc:Work>
+              <cc:License rdf:about="http://creativecommons.org/licenses/publicdomain/">
+                <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction" />
+                <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution" />
+                <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+              </cc:License>
+            </rdf:RDF>
+          </metadata>
+        </svg>
+      </div>
+      <div class="Page3Sec2">
+        <img id="IMG2" src="Asset/image/領養代替購買.gif" alt="" />
+        <p style="
               font-size: calc(1rem+1vw);
               margin-right: 2vw;
               min-height: 10vh;
               min-width: 60vw;
-            "
-          >
-            　　繁殖場、寵物店內的動物福利問題除了來源不明，繁殖場內的動物福利也是犬貓繁殖買賣產業鍊中的問題之一。許多業者為了賺取利益，通常以最小的空間飼養最多的犬貓，籠舍內排泄物四散、飲食不乾淨，種公種母長期被困在狹小、骯髒的籠舍中無法逃離，種母甚至要在這樣惡劣、高壓的環境中哺乳、生產。許多業者也將種公母聲帶割除，避免場所被發現，甚至放任犬貓受傷、生病也不給予醫療，僅將動物當成賺錢的「工具」。
-            　　我們相信只要有需求就會有供應，因此提倡「領養代替購買」來全面杜絕非法犬貓繁殖買賣業者的存在，是一種從根本解決動物不斷犧牲、受苦的方法之一。
-          </p>
-        </div>
+            ">
+          　　繁殖場、寵物店內的動物福利問題除了來源不明，繁殖場內的動物福利也是犬貓繁殖買賣產業鍊中的問題之一。許多業者為了賺取利益，通常以最小的空間飼養最多的犬貓，籠舍內排泄物四散、飲食不乾淨，種公種母長期被困在狹小、骯髒的籠舍中無法逃離，種母甚至要在這樣惡劣、高壓的環境中哺乳、生產。許多業者也將種公母聲帶割除，避免場所被發現，甚至放任犬貓受傷、生病也不給予醫療，僅將動物當成賺錢的「工具」。
+          　　我們相信只要有需求就會有供應，因此提倡「領養代替購買」來全面杜絕非法犬貓繁殖買賣業者的存在，是一種從根本解決動物不斷犧牲、受苦的方法之一。
+        </p>
       </div>
-      <!-- Page3 end -->
-      <!-- Page4 -->
-      <div id="page4" class="EachPage">
-        <div class="slider">
-          <div class="slides">
-            <div id="slide-1" class="Eachslide">
-              <h2 style="font-size: calc(2rem + 1.1vw)">Youtuber 推薦</h2>
-              <img src="Image/index-slide/Uni.png" alt="" />
-              <p>
-                <span style="font-size: calc(1.5rem + 1vw); font-weight: 700"
-                  >宇宙貓咪 Paw Boom <br
-                /></span>
-                YouTuber「木木安」家中養了橘貓拉姆、三花巴努、短毛麗露以及短毛黑魯，
-                她經常在頻道裡分享四隻貓咪的日常互動，
-                <br>
-                有時候也會開箱一些貓咪周邊商品、食物和網友交流，
-                既然養了四隻貓，當然也少不了許多養貓經驗談的分享，
-                和各界奴才們交流關於貓主子的知識。
-              </p>
-            </div>
-            <div id="slide-2" class="Eachslide">
-              <h2 style="font-size: calc(2rem + 1.1vw)">Youtuber 推薦</h2>
-              <img src="Asset/image/tastelady.jpg" alt="" class="imgShrink" />
-              <p>
-                <span style="font-size: calc(1.5rem + 1vw); font-weight: 700"
-                  >好位小姐 Lady Flavor <br
-                /></span>
-               從寵物電商起家的好味小姐，是三位以一句「養隻貓、做頓飯、一起過日子」
-               的創辦人憶起打造得品牌，
-               <br>
-               起初為了宣傳理念投入youtube，以寵物家庭日常
-               吸引非多的粉絲。
-              </p>
-            </div>
-            <div id="slide-3" class="Eachslide">
-              <h2 style="font-size: calc(2rem + 1.1vw)">Youtuber 推薦</h2>
-              <img src="Asset/image/ytber3.jpg" alt="" class="imgShrink"/>
-              <p>
-                <span style="font-size: calc(1.5rem + 1vw); font-weight: 700"
-                  >辛卡米克<br
-                /></span>
-                辛卡米克是一個網路漫畫家，同時也是遊戲實況主，他的作品原本畫的是生活日常，
-                但在2013年誤打誤撞成為貓奴後，因為畫出許多貓奴的心聲，在網路上引起討論。
-              </p>
-            </div>
+    </div>
+    <!-- Page3 end -->
+    <!-- Page4 -->
+    <div id="page4" class="EachPage">
+      <div class="slider">
+        <div class="slides">
+          <div id="slide-1" class="Eachslide">
+            <h2 style="font-size: calc(2rem + 1.1vw)">Youtuber 推薦</h2>
+            <img src="Image/index-slide/Uni.png" alt="" />
+            <p>
+              <span style="font-size: calc(1.5rem + 1vw); font-weight: 700">宇宙貓咪 Paw Boom <br /></span>
+              YouTuber「木木安」家中養了橘貓拉姆、三花巴努、短毛麗露以及短毛黑魯，
+              她經常在頻道裡分享四隻貓咪的日常互動，
+              <br>
+              有時候也會開箱一些貓咪周邊商品、食物和網友交流，
+              既然養了四隻貓，當然也少不了許多養貓經驗談的分享，
+              和各界奴才們交流關於貓主子的知識。
+            </p>
+          </div>
+          <div id="slide-2" class="Eachslide">
+            <h2 style="font-size: calc(2rem + 1.1vw)">Youtuber 推薦</h2>
+            <img src="Asset/image/tastelady.jpg" alt="" class="imgShrink" />
+            <p>
+              <span style="font-size: calc(1.5rem + 1vw); font-weight: 700">好位小姐 Lady Flavor <br /></span>
+              從寵物電商起家的好味小姐，是三位以一句「養隻貓、做頓飯、一起過日子」
+              的創辦人憶起打造得品牌，
+              <br>
+              起初為了宣傳理念投入youtube，以寵物家庭日常
+              吸引非多的粉絲。
+            </p>
+          </div>
+          <div id="slide-3" class="Eachslide">
+            <h2 style="font-size: calc(2rem + 1.1vw)">Youtuber 推薦</h2>
+            <img src="Asset/image/ytber3.jpg" alt="" class="imgShrink" />
+            <p>
+              <span style="font-size: calc(1.5rem + 1vw); font-weight: 700">辛卡米克<br /></span>
+              辛卡米克是一個網路漫畫家，同時也是遊戲實況主，他的作品原本畫的是生活日常，
+              但在2013年誤打誤撞成為貓奴後，因為畫出許多貓奴的心聲，在網路上引起討論。
+            </p>
           </div>
         </div>
       </div>
-      <!-- page4 end -->
     </div>
-  </body>
+    <!-- page4 end -->
+  </div>
+</body>
+
 </html>

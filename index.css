@@ -35,19 +35,19 @@ body {
 }
 
 #wrapper {
- 
+
   overflow: scroll;
   overflow-x: hidden;
   scroll-snap-type: y mandatory;
   /* Reserve space for header and additional space so above page are visible a bit*/
-  scroll-padding-top: calc(var(--bar-height));
-  scroll-padding-top: calc(var(--bar-height) + var(--extra-space));
+  /* scroll-padding-top: calc(var(--bar-height));
+  scroll-padding-top: calc(var(--bar-height) + var(--extra-space)); */
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: var(--bar-height) 0 0 0;
+  /* padding: var(--bar-height) 0 0 0; */
   /* Enable Safari touch scrolling physics which is needed for scroll snap */
   -webkit-overflow-scrolling: touch;
 }
@@ -68,44 +68,105 @@ body {
   flex-direction: column;
 }
 
-#MainNav {
-  width: 100vw;
+  #logo{
+    height: 100%;
+    float: left;
+  }
+  #logo:hover{
+   background-color:#fff5f5; 
+  }
+  #logo img{
+    width: 100px;
+    scale: 3.2;
+    object-fit: scale-down;
+    height: 100%;
+    transform: translateY(-0.45vh);
+  }
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  z-index: 1000;
+  background-color: #fff5f5;
+  padding-inline: 5% 5%;
+  height: 6vh;
+  height: 6svh;
+}
+
+
+.navbar a {
+  float: right;
+  direction: ltr;   
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  direction: ltr;   
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color:#ffcd93;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
   position: fixed;
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: row;
-  height: var(--bar-height);
-  min-height: var(--bar-height);
-  align-items: center;
-  top: 0;
-  z-index: 9;
-  font-size: 1em;
-  padding-left: 12.8vw;
-  padding-right: 12.8vw;
-  /* This make cat behind nav */
-  /* 1232 length on figma */
 }
 
-#NavLeft {
-  flex: 160;
-}
 
-#NavMid {
-  flex: 691;
-}
 
-#NavRight {
-  flex: 380;
-  display: flex;
-  flex-direction: row;
+/* #NavRight>div>div{
+  visibility: hidden;
+  position: absolute;
+  background-color: #fff5f5;
+   top: 5vh; 
 }
-
 #NavRight>div {
+  position: relative;
   padding-right: 2em;
   flex-grow: 1;
-  overflow: hidden;
   min-width: 64px;
-}
+  
+} */
 
 #Main_Sec1 {
   /* flex: 399; */
@@ -119,7 +180,7 @@ body {
 }
 
 #Main_Sec1>img {
-  height: clamp(10vw + 10em, 15vw , 35vw + 20em);
+  height: clamp(10vw + 10em, 15vw, 35vw + 20em);
   transform: translateY(25%);
 }
 
@@ -169,7 +230,7 @@ body {
   color: #ffffff;
   display: flex;
   justify-content: space-around;
-  aspect-ratio: 1 ;
+  aspect-ratio: 1;
   align-items: flex-end;
 }
 
@@ -205,24 +266,29 @@ body {
 
 #IMG2 {
   flex-basis: 30%;
-      height: clamp(10vw + 10em, 15vw , 35vw + 20em);
+  height: clamp(10vw + 10em, 15vw, 35vw + 20em);
 }
-.Page3Sec2{
+
+.Page3Sec2 {
   display: flex;
   flex-direction: row;
   background-color: #ffcd93;
 }
+
 .Page3Sec2 p {
   font-size: clamp(1rem, 0.875rem + 0.6667vw, 1.25rem);
 }
+
 @media only screen and (max-width: 550px) {
- .Page3Sec2{
-  display: inline-block;
+  .Page3Sec2 {
+    display: inline-block;
+  }
+
+  #page3 {
+    transform: translateY(10vh);
+  }
 }
-#page3{
-  transform: translateY(10vh);
-}
-}
+
 #page4 {
   justify-content: center;
   align-items: center;
@@ -289,10 +355,11 @@ body {
 }
 
 .Eachslide>p {
-font-size: clamp(0.75rem, 0.7054rem + 0.2381vw, 1rem);
+  font-size: clamp(0.75rem, 0.7054rem + 0.2381vw, 1rem);
 }
-.imgShrink{
-    /* height: clamp(10vw + 10em, 15vw , 25vw + 20em); */
-    width: 208px;
-    height: 208px;
+
+.imgShrink {
+  /* height: clamp(10vw + 10em, 15vw , 25vw + 20em); */
+  width: 208px;
+  height: 208px;
 }

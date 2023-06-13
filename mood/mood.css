@@ -97,6 +97,7 @@ body {
     height:3331px;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap:10vh;
   }
   .item-1{
     display: grid;

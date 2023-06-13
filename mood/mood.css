@@ -220,7 +220,7 @@ body {
   }
 
   100% {
-    transform: translateY(5%);
+    transform: translateY(2%);
       opacity: 1;
   }
 }

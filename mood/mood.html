@@ -20,14 +20,39 @@
       </div>
       <div class="container_grid">
         <div class="item-1">
-            <div class="item-grid-1 img-1"></div>
-            <div class="item-grid-1 img-2"></div>
-            <div class="item-grid-1 img-3"></div>
+            <div class="item-grid-1 img-1" id="img_hover1">
+                <div class="img_overlay">
+                    <p class="img_text">貓貓生氣</p>
+                </div>
+            </div>
+            <div class="item-grid-1 img-2" id="img_hover2">
+                <div class="img_overlay">
+                    <p class="img_text">貓貓安心</p>
+                </div>
+            </div>
+            <div class="item-grid-1 img-3" id="img_hover3">
+                <div class="img_overlay">
+                    <p class="img_text">貓貓害怕</p>
+                </div>
+            </div>
+            <div class="img_up" id="img_text1">如何看出貓咪放出的警告訊息？</div>
+            <div class="img_up" id="img_text2">其實這些都是貓咪信任你的表現！</div>
+            <div class="img_up" id="img_text3">清楚了解貓咪的害怕的模樣才能防止貓咪持續害怕變成驚恐。</div>
         </div>
         <div class="item-grid">
             <h1>貓貓生氣</h1>
+            <div id="invisable0" class="hover_img0"></div>
             <div class="item">
-                <div class="items-0-img"></div>
+                <div class="items-0-img">
+                    <div class="s">
+                        <img src="./image/0.jpeg" alt=""> 
+                    </div>      
+                    <div class="sound_1"> 
+                        <div class="sound_img"><img src="./image/Vector.png" alt=""></div>      
+                        <div class="sound_img"><button id="playButton">生氣的聲音</button></div>  
+                        <audio id="audio" src="./sound/cat_angry.wav"></audio>
+                    </div> 
+                </div>
                 <div class="items-text">
                     <div class="text">
                         <h2>拍打尾巴</h2>
@@ -46,37 +71,52 @@
             </div>            
         </div>
         <div class="item-grid">
+            <div id="invisable1" class="hover_img1"></div>
             <h1>貓貓安心</h1>
             <div class="item">
-                <div class="items-1-img"></div>
+                <div class="items-0-img">
+                    <div class="s">
+                        <img src="./image/1.jpg" alt=""> 
+                    </div>      
+                    <div class="sound_1"> 
+                        <div class="sound_img"><img src="./image/Vector.png" alt=""></div>      
+                        <div class="sound_img"><button id="playButton02">安心的聲音</button></div>  
+                        <audio id="audio02" src="./sound/cat_purr.wav"></audio>
+                    </div> 
+                </div>
                 <div class="items-text">
                     <div class="text">
                         <h2>仰躺</h2>
-                        <p>是家貓覺得安心的姿勢，只要待在貓咪覺得安全的場
-                            所，就會放心地露出肚子放鬆。當貓咪想要主人陪
-                            伴或是想要提出要求的時候，也會出現這種毫無防備的姿勢。</p>
+                        <p>是家貓覺得安心的姿勢，只要待在貓咪覺得安全的場所，就會放心地露出肚子放鬆。當貓咪想要主人陪伴或是想要提出要求的時候，也會出現這種毫無防備的姿勢。</p>
                     </div>
                     <div class="text">
                         <h2>呼嚕嚕</h2>
-                        <p>貓咪擁有非常強烈的地盤意識，一但有外來者入侵自
-                            己的地盤，肯定會發火。這個時候牠們就會露出尖
-                            牙、豎起全身的毛，嚇阻對方不要繼續靠近。這個
-                            死動就連剛出生的小貓咪不必練習都做得到，這個是牠們的本能。</p>
+                        <p>貓咪擁有非常強烈的地盤意識，一但有外來者入侵自己的地盤，肯定會發火。這個時候牠們就會露出尖牙、豎起全身的毛，嚇阻對方不要繼續靠近。這個死動就連剛出生的小貓咪不必練習都做得到，這個是牠們的本能。</p>
                     </div>
                 </div>
             </div>            
         </div>
         <div class="item-grid">
+            <div id="invisable2" class="hover_img2"></div>
             <h1>貓貓害怕</h1>
             <div class="item">
-                <div class="items-2-img"></div>
+                <div class="items-0-img">
+                    <div class="s">
+                        <img src="./image/2.png" alt=""> 
+                    </div>      
+                    <div class="sound_1"> 
+                        <div class="sound_img"><img src="./image/Vector.png" alt=""></div>      
+                        <div class="sound_img"><button id="playButton03">害怕的聲音</button></div>  
+                        <audio id="audio03" src="./sound/cat_scary.wav"></audio>
+                    </div> 
+                </div>
                 <div class="items-text">
                     <div class="text">
                         <h2>藏尾巴</h2>
                         <p>貓咪把尾巴夾緊藏在後腿之間的時候，就代表牠們對某種事物感到害怕與恐懼，特別是比較小的貓，一有風吹草動就容易被嚇到。</p>
                     </div>
                     <div class="text">
-                        <h2>耳朵扁平</h2>
+                        <h2>耳多扁平</h2>
                         <p>通常情況下，如果貓咪有點害怕，或保持警惕，牠的耳朵是扁平的。然而，如果牠們感到嚴重的威脅與害怕，耳朵就會完全壓扁，俗稱「飛機耳」。
                             這種姿勢與發起攻擊的姿勢不同，在這種情況下貓咪會把耳朵轉回來，就像要準備攻擊什麼東西一樣。</p>
                     </div>
@@ -84,5 +124,74 @@
             </div>            
         </div>
       </div>
+      <script>  
+        var audio = document.getElementById('audio');
+        var playButton = document.getElementById('playButton');
+
+        playButton.addEventListener('click', function() {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+                audio.currentTime = 0; // 將播放時間重設為0，以便下次點擊時重新播放
+            }
+            });
+
+        var audio02 = document.getElementById('audio02');
+        var playButton02 = document.getElementById('playButton02');
+
+        playButton02.addEventListener('click', function() {
+            if (audio02.paused) {
+                audio02.play();
+            } else {
+                audio02.pause();
+                audio02.currentTime = 0; // 將播放時間重設為0，以便下次點擊時重新播放
+            }
+            });
+
+        var audio03 = document.getElementById('audio03');
+        var playButton03 = document.getElementById('playButton03');
+
+        playButton03.addEventListener('click', function() {
+            if (audio03.paused) {
+                audio03.play();
+            } else {
+                audio03.pause();
+                audio03.currentTime = 0; // 將播放時間重設為0，以便下次點擊時重新播放
+            }
+            });
+        function scrolldiv(val) {
+            const collection = document.getElementsByClassName("item-grid")
+            window.scrollTo(0,findPosition(collection[val]))
+            let image = document.getElementById(`invisable${val}`)
+
+            let text = document.getElementsByClassName('items-text')
+            text[val] .classList.add("text_animation");
+
+            image.classList.add("full");
+        }    
+        function findPosition(obj) {
+                var currenttop = 0;
+                if (obj.offsetParent) {
+                    do {
+                        currenttop += obj.offsetTop;
+                    } while ((obj = obj.offsetParent));
+                    return [currenttop-180]; 
+                    // 調整滑進的視窗大小
+                }
+            }        
+        document.getElementById('img_hover1').
+            addEventListener('click',function(event){
+                scrolldiv(0)
+            });
+        document.getElementById('img_hover2').
+            addEventListener('click',function(event){
+                scrolldiv(1)
+            });
+        document.getElementById('img_hover3').
+            addEventListener('click',function(event){
+                scrolldiv(2)
+            });
+      </script>
 </body>
 </html>

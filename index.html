@@ -10,24 +10,37 @@
 </head>
 
 <body>
-  <div id="wrapper">
-    <div id="MainNav">
-      <div id="NavLeft">
-        <img src="./Image/logo.svg" alt="">
-      </div>
-      <div id="NavMid"></div>
-      <div id="NavRight">
-        <div>Home</div>
-        <div>行為百科</div>
-        <div>新手百科</div>
-        <div>聯絡我們</div>
+  <div class="navbar">
+    <a href="index.html"id="logo"><img src="./image/logo.svg" href="index.html" >het</a>
+    <a href="./contact/index.html">聯絡我們</a>
+    <div class="dropdown">
+      <button class="dropbtn">新手百科
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="./mood/mood.html">貓咪情緒</a>
+        <a href="./behavior/behavior.html">貓咪行為</a>
+        <a href="./discipline/reaction.html">貓咪管教</a>
       </div>
     </div>
+    <div class="dropdown">
+      <button class="dropbtn">行為百科
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="./Daily/Daily.html">日用品</a>
+        <a href="./environment/environment.html">環境篇</a>
+      </div>
+    </div>
+    <a href="index.html">Home</a>
+  </div>
+  <div id="wrapper">
+
 
     <!-- Page1 -->
     <div id="Page1" class="EachPage">
       <div id="Main_Sec1">
-        <img src="Image/IMG_5602 1.png" alt="" />
+        <img src="./image/IMG_5602 1.png" alt="" />
       </div>
       <div id="Main_Sec2">
         <h1>關於網站</h1>
@@ -45,7 +58,7 @@
     <div id="page2" class="EachPage">
       <div id="P2Sec1">
         <h2></h2>
-        <h2 style="font-size: 2em">清單</h2>
+        <h2 style="font-size: 2em">目錄簡介</h2>
       </div>
       <div id="cardWrapp">
         <div class="Card" id="P2Card1">
@@ -57,9 +70,9 @@
         <div class="Card" id="P2Card3">
           <p>聯絡我們</p>
         </div>
-        <div id="CardHide1" class="hidecard">lor</div>
-        <div id="CardHide2" class="hidecard"></div>
-        <div id="CardHide3" class="hidecard"></div>
+        <div id="CardHide1" class="hidecard">透過全方位的觀察解讀貓咪們的身體語言，才能真正了解牠們的狀況與心情</div>
+        <div id="CardHide2" class="hidecard">集結並統整所有貓奴需要的問題與基本知識</div>
+        <div id="CardHide3" class="hidecard">除了網站提到的所有事項外，如有關於貓咪的疑問，歡迎寫信來詢問我們！</div>
       </div>
     </div>
     <!-- Page2 end -->
@@ -120,9 +133,14 @@
           </metadata>
         </svg>
       </div>
-      <div id="Main_Sec2" style="flex-direction: row; align-items: unset">
-        <img id="IMG2" src="Image/fd06f4fa8eb80b9deff3b4da69a2f333.jpg" alt="" />
-        <p style="font-size: calc(1rem+1vw); margin-right: 2vw; min-height: 10vh; min-width: 60vw;">
+      <div class="Page3Sec2">
+        <img id="IMG2" src="Asset/image/領養代替購買.gif" alt="" />
+        <p style="
+              font-size: calc(1rem+1vw);
+              margin-right: 2vw;
+              min-height: 10vh;
+              min-width: 60vw;
+            ">
           　　繁殖場、寵物店內的動物福利問題除了來源不明，繁殖場內的動物福利也是犬貓繁殖買賣產業鍊中的問題之一。許多業者為了賺取利益，通常以最小的空間飼養最多的犬貓，籠舍內排泄物四散、飲食不乾淨，種公種母長期被困在狹小、骯髒的籠舍中無法逃離，種母甚至要在這樣惡劣、高壓的環境中哺乳、生產。許多業者也將種公母聲帶割除，避免場所被發現，甚至放任犬貓受傷、生病也不給予醫療，僅將動物當成賺錢的「工具」。
           　　我們相信只要有需求就會有供應，因此提倡「領養代替購買」來全面杜絕非法犬貓繁殖買賣業者的存在，是一種從根本解決動物不斷犧牲、受苦的方法之一。
         </p>
@@ -132,52 +150,42 @@
     <!-- Page4 -->
     <div id="page4" class="EachPage">
       <div class="slider">
-
         <div class="slides">
           <div id="slide-1" class="Eachslide">
-            <h2 style="font-size: calc(2rem + 1.1vw);">Youtuber 推薦</h2>
-            <img src="Image/index-slide/Uni.png" alt="">
-            <p><span style=" font-size: calc(1.5rem + 1vw);
-    font-weight: 700;">宇宙貓咪 Paw Boom <br></span>
+            <h2 style="font-size: calc(2rem + 1.1vw)">Youtuber 推薦</h2>
+            <img src="./image/index-slide/Uni.png" alt="" />
+            <p>
+              <span style="font-size: calc(1.5rem + 1vw); font-weight: 700">宇宙貓咪 Paw Boom <br /></span>
               YouTuber「木木安」家中養了橘貓拉姆、三花巴努、短毛麗露以及短毛黑魯，
               她經常在頻道裡分享四隻貓咪的日常互動，
+              <br>
               有時候也會開箱一些貓咪周邊商品、食物和網友交流，
               既然養了四隻貓，當然也少不了許多養貓經驗談的分享，
               和各界奴才們交流關於貓主子的知識。
             </p>
           </div>
           <div id="slide-2" class="Eachslide">
-              <h2 style="font-size: calc(2rem + 1.1vw);">Youtuber 推薦</h2>
-            <img src="Image/index-slide/Uni.png" alt="">
-            <p><span style=" font-size: calc(1.5rem + 1vw);
-    font-weight: 700;">宇宙貓咪 Paw Boom <br></span>
-              YouTuber「木木安」家中養了橘貓拉姆、三花巴努、短毛麗露以及短毛黑魯，
-              她經常在頻道裡分享四隻貓咪的日常互動，
-              有時候也會開箱一些貓咪周邊商品、食物和網友交流，
-              既然養了四隻貓，當然也少不了許多養貓經驗談的分享，
-              和各界奴才們交流關於貓主子的知識。
+            <h2 style="font-size: calc(2rem + 1.1vw)">Youtuber 推薦</h2>
+            <img src="./Asset/image/tastelady.jpg" alt="" class="imgShrink" />
+            <p>
+              <span style="font-size: calc(1.5rem + 1vw); font-weight: 700">好位小姐 Lady Flavor <br /></span>
+              從寵物電商起家的好味小姐，是三位以一句「養隻貓、做頓飯、一起過日子」
+              的創辦人憶起打造得品牌，
+              <br>
+              起初為了宣傳理念投入youtube，以寵物家庭日常
+              吸引非多的粉絲。
             </p>
           </div>
           <div id="slide-3" class="Eachslide">
-              <h2 style="font-size: calc(2rem + 1.1vw);">Youtuber 推薦</h2>
-            <img src="Image/index-slide/Uni.png" alt="">
-            <p><span style=" font-size: calc(1.5rem + 1vw);
-    font-weight: 700;">宇宙貓咪 Paw Boom <br></span>
-              YouTuber「木木安」家中養了橘貓拉姆、三花巴努、短毛麗露以及短毛黑魯，
-              她經常在頻道裡分享四隻貓咪的日常互動，
-              有時候也會開箱一些貓咪周邊商品、食物和網友交流，
-              既然養了四隻貓，當然也少不了許多養貓經驗談的分享，
-              和各界奴才們交流關於貓主子的知識。
+            <h2 style="font-size: calc(2rem + 1.1vw)">Youtuber 推薦</h2>
+            <img src="./Asset/image/ytber3.jpg" alt="" class="imgShrink" />
+            <p>
+              <span style="font-size: calc(1.5rem + 1vw); font-weight: 700">辛卡米克<br /></span>
+              辛卡米克是一個網路漫畫家，同時也是遊戲實況主，他的作品原本畫的是生活日常，
+              但在2013年誤打誤撞成為貓奴後，因為畫出許多貓奴的心聲，在網路上引起討論。
             </p>
           </div>
-
         </div>
-      </div>
-      <div class="slider">
-        <a href="#slide-1"></a>
-        <a href="#slide-2"></a>
-        <a href="#slide-3"></a>
-
       </div>
     </div>
     <!-- page4 end -->

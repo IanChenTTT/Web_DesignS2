@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;700;900&display=swap");
 
 html {
-  height: 100%;
+  margin: 0;
+  padding: 0;
+  --bar-height: 15vh;
+  --extra-space: 30px;
 }
 
 *::-webkit-scrollbar {
@@ -17,90 +20,167 @@ html {
   border-radius: 10px;
   border: 3px none #ffffff;
 }
-:root{
+
+:root {
   --CARD-SIZE: 3;
 }
+
 body {
-  width: 100svw;
-  min-width: fit-content;
-  height: 100svh;
-  margin: 0;
-  padding: 0;
   background-color: #fff1e3;
   font-size: 16px;
   font-weight: 400;
+  margin: 0;
+  padding: 0;
   font-family: "Noto Sans TC", sans-serif;
 }
 
 #wrapper {
-  overflow-anchor: none;
-  height: 100%;
-  overflow-y: scroll;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
+
+  overflow: scroll;
+  overflow-x: hidden;
   scroll-snap-type: y mandatory;
+  /* Reserve space for header and additional space so above page are visible a bit*/
+  /* scroll-padding-top: calc(var(--bar-height));
+  scroll-padding-top: calc(var(--bar-height) + var(--extra-space)); */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* padding: var(--bar-height) 0 0 0; */
+  /* Enable Safari touch scrolling physics which is needed for scroll snap */
+  -webkit-overflow-scrolling: touch;
 }
-.Myfont{
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 1em;
-line-height: 19px;
+
+.Myfont {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 19px;
 }
+
 .EachPage {
+  scroll-snap-align: start;
+  height: 100vh;
   min-height: 100svh;
   display: flex;
   flex-direction: column;
-  scroll-snap-align: start;
 }
 
-#MainNav {
+  #logo{
+    height: 100%;
+    float: left;
+  }
+  #logo:hover{
+   background-color:#fff5f5; 
+  }
+  #logo img{
+    width: 100px;
+    scale: 3.2;
+    object-fit: scale-down;
+    height: 100%;
+    transform: translateY(-0.45vh);
+  }
+.navbar {
+  overflow: hidden;
+  background-color: #333;
   position: sticky;
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: row;
-  min-height: 15svh;
-  align-items: center;
-  top: 0;
-  z-index: 9;
-  font-size: 1em;
-  padding-left: 12.8vw;
-  padding-right: 12.8vw;
-  /* This make cat behind nav */
-  /* 1232 length on figma */
+  z-index: 1000;
+  background-color: #fff5f5;
+  padding-inline: 5% 5%;
+  height: 6vh;
+  height: 6svh;
 }
 
-#NavLeft {
-  flex: 160;
+
+.navbar a {
+  float: right;
+  direction: ltr;   
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-#NavMid {
-  flex: 691;
+.dropdown {
+  direction: ltr;   
+  float: right;
+  overflow: hidden;
 }
 
-#NavRight {
-  flex: 380;
-  display: flex;
-  flex-direction: row;
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
 }
 
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color:#ffcd93;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  position: fixed;
+}
+
+
+
+/* #NavRight>div>div{
+  visibility: hidden;
+  position: absolute;
+  background-color: #fff5f5;
+   top: 5vh; 
+}
 #NavRight>div {
+  position: relative;
   padding-right: 2em;
   flex-grow: 1;
-  overflow: hidden;
   min-width: 64px;
-}
+  
+} */
 
 #Main_Sec1 {
   /* flex: 399; */
-  height: 60%;
+  /* height: 60%; */
+  /* DONT PUT ANY HEIGHT IN SCROLL SNAP!!!!!!!! */
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  background-image: url(./Asset/image/Home_repeat.jpg);
+  background-repeat: repeat;
 }
 
 #Main_Sec1>img {
+  height: clamp(10vw + 10em, 15vw, 35vw + 20em);
   transform: translateY(25%);
 }
 
@@ -116,56 +196,86 @@ line-height: 19px;
   font-size: 3em;
 }
 
-#Main_Sec2>p {
-  font-size: 1em;
+#Page1 #Main_Sec2 p {
+  font-size: clamp(1.25rem, 0.9375rem + 1.6667vw, 1.875rem);
+  text-align: center;
 }
 
 /* PAGE 2 CSS  */
 #page2 {
-  align-items: center;
   justify-content: flex-end;
 }
 
 #cardWrapp {
   flex: 2;
-  font-size: 2em;
+  font-size: clamp(2rem, 0.9375rem + 1.6667vw, 1.875rem);
   gap: 7vw;
   display: grid;
-  grid-template-columns: repeat(var(--CARD-SIZE), minmax(20vw, 1fr));
-  grid-template-rows: minmax(20vw, 1fr) 3em;
+  grid-template-columns: repeat(var(--CARD-SIZE), minmax(15vw, 17vw));
+  gap: 4ch;
+  grid-template-rows: minmax(15vw, 17vw) 2vh;
+  align-self: center;
 }
 
 #P2Sec1 {
   width: 100%;
-  flex: 2;
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .Card {
-  border-radius: 45px;
+  border-radius: 10px;
   background-color: #b8b7b7;
   color: #ffffff;
   display: flex;
   justify-content: space-around;
+  aspect-ratio: 1 / 1;
   align-items: flex-end;
 }
 
 .hidecard {
-  display: none;
+  /* display: none; */
+  visibility: hidden;
+  font-size: clamp(1rem, 0.9639rem + 0.2312vw, 1.25rem);
 }
 
 .Card:hover {
   background-color: #4a4a4a;
+  opacity: 0.5;
 }
 
 .Card:hover>p {
   align-self: center;
 }
+#P2Card1{
+  background-image: url(./Asset/image/Home_card1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#P2Card2{
+  background-image: url(./Asset/image/Home_card2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#P2Card3{
+  background-image: url(./Asset/image/Home_card3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 #P2Card1:hover~#CardHide1 {
-  display: block;
+  /* display: block; */
+  visibility: visible;
+  color: red;
+}
+#P2Card2:hover~#CardHide2 {
+  visibility: visible;
+  color: red;
+}
+#P2Card3:hover~#CardHide3 {
+  visibility: visible;
   color: red;
 }
 
@@ -183,9 +293,28 @@ line-height: 19px;
 }
 
 #IMG2 {
-  height: 45svh;
-  transform: translateY(10px);
-  clip-path: polygon(40% 0, 85% 0, 85% 100%, 40% 100%);
+  flex-basis: 30%;
+  height: clamp(10vw + 10em, 15vw, 35vw + 20em);
+}
+
+.Page3Sec2 {
+  display: flex;
+  flex-direction: row;
+  background-color: #ffcd93;
+}
+
+.Page3Sec2 p {
+  font-size: clamp(1rem, 0.875rem + 0.6667vw, 1.25rem);
+}
+
+@media only screen and (max-width: 550px) {
+  .Page3Sec2 {
+    display: inline-block;
+  }
+
+  #page3 {
+    transform: translateY(10vh);
+  }
 }
 
 #page4 {
@@ -203,9 +332,10 @@ line-height: 19px;
   display: flex;
   overflow-x: auto;
   scrollbar-color: rgba(255, 255, 255);
-
+  gap: 25vw;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
+  overflow-anchor: none;
 }
 
 .slides::-webkit-scrollbar {
@@ -253,6 +383,11 @@ line-height: 19px;
 }
 
 .Eachslide>p {
-  min-width: 40em;
-  max-width: 45em;
+  font-size: clamp(0.75rem, 0.7054rem + 0.2381vw, 1rem);
+}
+
+.imgShrink {
+  /* height: clamp(10vw + 10em, 15vw , 25vw + 20em); */
+  width: 208px;
+  height: 208px;
 }

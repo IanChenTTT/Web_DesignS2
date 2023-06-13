@@ -1,6 +1,4 @@
-
 body {
-
     width: 100svw;
     min-width: fit-content;
     height: 3331px;
@@ -11,43 +9,95 @@ body {
     font-weight: 400;
     font-family: "Noto Sans TC", sans-serif;
     }
-  #MainNav {
-    position: sticky;
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: row;
-    min-height: 15svh;
-    align-items: center;
-    top: 0;
-    z-index: 9;
-    font-size: 1em;
-    /* This make cat behind nav */
-    /* 1232 length on figma */
-  }
-  #NavLeft {
-    flex: 160;
-  }
-
-  #NavMid {
-    flex: 691;
-  }
-
-  #NavRight {
-    flex: 380;
-    display: flex;
-    flex-direction: row;
-  }
-
-  #NavRight>div {
-    padding-right: 2em;
-    flex-grow: 1;
+    #logo{
+      height: 100%;
+      float: left;
+    }
+    #logo:hover{
+     background-color:#fff5f5; 
+    }
+    #logo img{
+      width: 100px;
+      scale: 3.2;
+      object-fit: scale-down;
+      height: 100%;
+      transform: translateY(-0.45vh);
+    }
+  .navbar {
     overflow: hidden;
-    min-width: 64px;
+    background-color: #333;
+    position: sticky;
+    z-index: 1000;
+    background-color: #fff5f5;
+    padding-inline: 5% 5%;
+    height: 6vh;
+    height: 6svh;
+    top:0;
+  }
+  
+  
+  .navbar a {
+    float: right;
+    direction: ltr;   
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .dropdown {
+    direction: ltr;   
+    float: right;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color:#ffcd93;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+    position: fixed;
   }
   .container_grid{
     height:3331px;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap:10vh;
   }
   .item-1{
     display: grid;
@@ -241,7 +291,6 @@ body {
 .item-1 {
   display: grid;
   grid-template-columns: repeat(3 , minmax(20vw, 25vw)) ;
-  aspect-ratio: 1 / 1;
   justify-content: space-evenly;
   align-items: center;
   align-content: center;

@@ -10,19 +10,32 @@
     <title>Document</title>
 </head>
 <body>
+  <div class="navbar1">
+    <a href="../index.html"id="logo"><img src="../image/logo.svg" alt="" href="../index.html" ></a>
+    <a href="../contact/index.html">聯絡我們</a>
+    <div class="dropdown">
+      <button class="dropbtn">新手百科
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="../mood/mood.html">貓咪情緒</a>
+        <a href="../behavior/behavior.html">貓咪行為</a>
+        <a href="../discipline/reaction.html">貓咪管教</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">行為百科
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="../Daily/Daily.html">日用品</a>
+        <a href="../environment/environment.html">環境篇</a>
+      </div>
+    </div>
+    <a href="../index.html">Home</a>
+  </div>
     <div id="wrapper">
-        <div id="MainNav">
-            <div id="NavLeft">
-                <img src="./img/logo.svg" alt="">
-            </div>
-            <div id="NavMid"></div>
-            <div id="NavRight">
-                <div>Home</div>
-                <div>行為百科</div>
-                <div>新手百科</div>
-                <div>聯絡我們</div>
-            </div>
-        </div>
+
         <!-- Page1 -->
 
         <div id="page1" class="EachPage">
@@ -49,12 +62,6 @@
             <div id="P2Sec1">
                 <h3 style="font-size: 2em">錯誤管教法</h3>
             </div>
-            <!-- <button>不要把貓咪跟狗狗做比較</button>
-            <button>不要透過體罰管教你的貓咪</button>
-            <button>不要利用大吼大叫來吸引牠的注意</button>
-            <button>不要在貓咪隨意大小便時責備牠</button>
-            <button>不容許不正確的玩耍方式</button>
-            <button>不要使用噴霧器</button>             -->
             <div class="accordion" id="accordionPanelsStayOpenExample">
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="panelsStayOpen-headingOne">
@@ -86,6 +93,11 @@
                         不要利用大吼大叫來吸引牠的注意
                     </button>
                   </h2>
+                  <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                    <div class="accordion-body">
+                      人跟貓咪說的語言本來就不一樣，所以不要以為牠會在我們大聲說話時更懂你想表達的意思。當然，貓咪可能瞭解你的音量變化表示有不同的狀況發生，但大吼大叫可能使牠們受到驚嚇，或是讓貓咪更把注意力放在不良的行為上。大吼大叫可能使貓咪感到緊迫和焦慮，進而衍生出其他不良行為。
+                    </div>
+                  </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="panelsStayOpen-headingFour">
@@ -93,6 +105,11 @@
                         不要在貓咪隨意大小便時責備牠
                       </button>
                     </h2>
+                    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
+                      <div class="accordion-body">
+                        在貓咪隨地大小便時責備牠，只會激怒牠而已。我們不會突然就知道牠不使用砂盆的動機，牠也不會保證不再重蹈覆轍。在貓咪隨地大小便時責備牠，會使貓咪更關注犯罪現場，甚至可能強化貓咪的觀念，認為在哪裡排泄都沒關係。最好的做法就是徹底清理牠大小便的地方，然後繼續進行如廁訓練。
+                      </div>
+                    </div>
                   </div>
                   <div class="accordion-item">
                     <h2 class="accordion-header" id="panelsStayOpen-headingFive">
@@ -100,6 +117,11 @@
                         不容許不正確的玩耍方式
                       </button>
                     </h2>
+                    <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFive">
+                      <div class="accordion-body">
+                        可愛的幼貓在玩耍時拍打或咬你的手指時，可能認為牠不知道這樣做是錯的。然而，你一定知道啃咬和抓搔並不是你希望家中成貓會有的行為。家中出現新寵物時，需要決定是否及早設定行為的預期標準。如果貓咪開始在玩耍時對你抓搔或啃咬，即使牠不是故意的，也必須立刻停止玩耍，這樣牠才會瞭解什麼可以做、什麼不能做。這點在貓咪和小孩玩耍時特別重要。如果你在跟牠玩耍時，允許牠啃咬你的手指，牠或許會以為對小孩也可以這麼做。這可能導致小孩害怕貓咪。
+                      </div>
+                    </div>
                   </div>
                   <div class="accordion-item">
                     <h2 class="accordion-header" id="panelsStayOpen-headingSix">
@@ -107,6 +129,11 @@
                         不要使用噴霧器
                       </button>
                     </h2>
+                    <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingSix">
+                      <div class="accordion-body">
+                        有個古老的迷思是使用噴霧器矯正貓咪的不良行為，但其實牠可能不會把噴霧和不良行為聯想在一起。牠可能中斷自己原本在做的行為，逃避噴霧攻擊，卻不會因此瞭解這種管教跟牠的行為有關。這種方法也可能使貓咪在看到噴霧器時變得退縮。
+                      </div>
+                    </div>
                   </div>
               </div>
         <!-- Page2 end -->
@@ -129,11 +156,16 @@
                   </div>
                 </div>
                 <div class="accordion-item">
-                  <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                  <h2 class="accordion-header" id="panelsStayOpen-headingTwo2">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo2" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo2">
                         立即停止「不良」行為
                     </button>
                   </h2>
+                  <div id="panelsStayOpen-collapseTwo2" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo2">
+                    <div class="accordion-body">
+                      管教貓咪不一定要主動進行。其實停止對貓咪的關注，或許是最有效的方法之一，這能夠清楚表達你的意見，並阻止牠繼續表現不良行為，例如啃咬、咀嚼、突然襲擊。將貓咪的注意力轉移到其他事物，是強化良好行為和停止不良行為的好方法。舉例來說，如果貓咪開始抓沙發，可以將牠的注意力轉移到貓抓板上
+                    </div>
+                  </div>
                 </div>
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="panelsStayOpen-headingThree3">
@@ -141,6 +173,11 @@
                         確實考慮貓咪健康
                     </button>
                   </h2>
+                  <div id="panelsStayOpen-collapseThree3" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree3">
+                    <div class="accordion-body">
+                      你的貓咪會在砂盆以外的地方上廁所嗎？儘管幼貓可能需要花一些時間學習在正確的地方上廁所，但成貓應該早就知道。如果你的貓咪突然開始在家中其他區域大小便，請與獸醫師預約門診。這種行為變化可能是健康出現變化的症狀，而獸醫師能夠告訴你貓咪的健康是否達到標準。你絕對不會願意因為貓咪無法控制的事而懲罰牠。與獸醫師合作，瞭解貓咪在家中隨地大小便的根本原因。如果與健康有關，他們可以為你提供選擇，協助貓咪恢復健康，如果是行為問題，則會根據牠們過去和貓咪的互動，為你提供行為矯正的其他訣竅。
+                    </div>
+                  </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="panelsStayOpen-headingFour4">
@@ -148,19 +185,13 @@
                         改變環境
                       </button>
                     </h2>
+                    <div id="panelsStayOpen-collapseFour4" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour4">
+                      <div class="accordion-body">
+                        如果你正努力讓貓咪停止去抓真皮沙發或跳上桌子，可以利用改變環境，制止牠的行為。例如在桌子邊緣放烤盤，貓咪跳上桌子時會撞翻烤盤，讓它掉到地上發出聲響。在真皮沙發上放柔軟絲滑的毯子，貓咪想要爬上墊子時就會滑下來。絕對不要採取可能傷害貓咪的改變方式，網路上有不少對貓咪安全的方法，可以協助你找到正確改變貓咪行為的方式。
+                      </div>
+                    </div>
                   </div>
-            <!-- <button>強化良好的行為</button>
-            <button>立即停止「不良」行為</button>
-            <button>確實考慮貓咪健康</button>
-            <button>改變環境</button> -->
-        </div>
-        <!-- Page3 end -->
-
-    <!-- <script>
-        function scrollToSection(selector) {
-          const section = document.querySelector(selector);
-          section.scrollIntoView({ behavior: 'smooth' });
-        }
-      </script> -->
+                </div>
+        <!-- Page3 end --> 
 </body>
 </html>

@@ -221,6 +221,7 @@ body {
 .hidecard {
   visibility: hidden;
   font-size: clamp(1rem, 0.9639rem + 0.2312vw, 1.25rem);
+   color: #636363;
 }
 
 .Card:hover {
@@ -248,21 +249,16 @@ body {
 }
 
 #P2Card1:hover~#CardHide1 {
-  /* display: block; */
   visibility: visible;
-  color: red;
 }
 #P2Card2:hover~#CardHide2 {
   visibility: visible;
-  color: red;
 }
 #P2Card3:hover~#CardHide3 {
   visibility: visible;
-  color: red;
 }
 #P2Card4:hover~#CardHide4 {
   visibility: visible;
-  color: red;
 }
 
 /* #P2Card1:hover + #CardHide1{

@@ -20,6 +20,7 @@ git status                ///檢查你的檔案狀態
 git add *                 ///追蹤所有檔案
 git fetch                 ///從你的遠端獲取或拉取
 git merge                 ///合併（merge）到你的其中一個分支
+git push origin main      ///以下命令將本地的 你現在的分支 推送到 origin 主機(遠端)的 main 分支。 
 ```
 
 ## Contributing

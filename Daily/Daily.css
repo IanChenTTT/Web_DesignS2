@@ -20,6 +20,7 @@ html {
 
 :root {
   --CARD-SIZE: 3;
+  --BG-URL:url(../Asset/image/Cardcat1.PNG);
 }
 
 body {
@@ -213,9 +214,10 @@ body {
   background-color: #b8b7b7;
   color: #ffffff;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: end;
   aspect-ratio: 1 / 1;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .hidecard {
@@ -227,10 +229,25 @@ body {
 .Card:hover {
   background-color: #4a4a4a;
   opacity: 0.5;
+  justify-content: center;
 }
 
 .Card:hover>p {
   align-self: center;
+}
+.Card:hover::before{
+ background-image: var(--BG-URL);
+    top: 30px;
+    height: 12vw;
+    width: 12vw;
+    background-size: cover;
+    /* background-color: red; */
+    content: '';
+    /* align-self: center; */
+    justify-self: flex-end;
+    position: relative;
+    top: calc(-17vw / 2 - 0.75vw);
+    
 }
 #P2Card1{
   background-image: url(./Asset/image/Home_card1.jpg);

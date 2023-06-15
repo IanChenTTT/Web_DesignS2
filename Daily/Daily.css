@@ -152,6 +152,7 @@ body {
 #Main_Sec1>img {
   height: 100%;
   width: 100%;
+  object-fit: cover;
 }
 
 #Main_Sec2 {
@@ -200,7 +201,11 @@ body {
   grid-template-rows: minmax(15vw, 17vw) 2vh;
   align-self: center;
 }
-
+.Card p {
+  margin: 0;
+  padding: 0;
+  font-size: clamp(0.75rem, 0.4971rem + 1.6185vw, 2.5rem);
+}
 #P2Sec1 {
   width: 100%;
   flex: 1;
@@ -216,7 +221,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: end;
-  aspect-ratio: 1 / 1;
+  /* aspect-ratio: 1 / 1; */
   align-items: center;
 }
 
